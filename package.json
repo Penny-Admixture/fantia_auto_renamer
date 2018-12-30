@@ -1,0 +1,18 @@
+{
+  "name": "fantia_auto_renamer",
+  "version": "0.0.1",
+  "description": "Fantia Auto Renamer",
+  "devDependencies": {
+    "bestzip": "^1.1.4",
+    "sinon-chrome": "^2.3.1"
+  },
+  "scripts": {
+    "build": "bestzip IwaraSourceDownloader_chrome.zip background.js manifest.json content_scripts icons options"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://mmduser1@github.com/mmduser1/fantia_auto_renamer.git"
+  },
+  "author": "mmduser1",
+  "license": "MIT"
+}
