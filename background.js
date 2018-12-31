@@ -39,9 +39,11 @@
    *down.jsから動画情報を受け取ってダウンロードを開始する
    */
   chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
-    title = decodeURI(fileURL.split("?")[0].split("_")[2]);
+    let title = decodeURI(
+      fileURL.split(/file\/\d{6}\/\w{9}/)[1].split("?Key-Pair")[0]
+    );
     chrome.storage.local.get(["filename"], settings => {
-      var filename = request.fanclub_ownername + " - " + title;
+      let filename = request.fanclub_ownername + " - " + title;
       if (typeof settings.filename !== "undefined") {
         if (settings.filename.indexOf("type1") != -1) {
           filename = request.fanclub_ownername + " - " + title;
@@ -52,7 +54,7 @@
         }
       }
 
-      var startDownload = chrome.downloads.download({
+      let startDownload = chrome.downloads.download({
         url: fileURL,
         filename: filename,
         conflictAction: "prompt",
