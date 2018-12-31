@@ -57,7 +57,7 @@
       let startDownload = chrome.downloads.download({
         url: fileURL,
         filename: filename,
-        conflictAction: "prompt",
+        conflictAction: "uniquify",
         saveAs: true
       });
     });
