@@ -40,7 +40,7 @@
    */
   chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     let title = decodeURI(
-      fileURL.split(/file\/\d{6}\/\w{9}/)[1].split("?Key-Pair")[0]
+      fileURL.split(/file\/\d+\/\w{9}/)[1].split("?Key-Pair")[0]
     );
     chrome.storage.local.get(["filename"], settings => {
       let filename = request.fanclub_ownername + " - " + title;
