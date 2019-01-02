@@ -1,6 +1,6 @@
 {
   "name": "fantia_auto_renamer",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Fantia Auto Renamer",
   "devDependencies": {
     "bestzip": "^1.1.4",
